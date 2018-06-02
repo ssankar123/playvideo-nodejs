@@ -46,6 +46,11 @@ var app = express();
 // All your express server code goes here.
 // ...
 
+
+// routes.js
+path.get('/pagecount', (req, res) => {
+  res.path('pagecount')
+}
 // Upload route.
 app.post('/upload', function(req, res) {
     var form = new formidable.IncomingForm();
