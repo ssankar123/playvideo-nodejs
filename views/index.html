@@ -65,7 +65,7 @@ article {
 </video> 
      <div id="UploadBox">
         <h2>Video Uploader</h2>
-            <form action="/" enctype="multipart/form-data" method="post">
+            <form action="#" enctype="multipart/form-data" method="post">
             <input type="text" name="title">
             <input type="file" name="file">
             <input type="submit" value="Upload">
@@ -80,7 +80,6 @@ article {
     $('#submit').click(function()
 {
     $.ajax({
-        url: '/',
         type:'POST',
         data:
         {
