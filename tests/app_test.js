@@ -56,7 +56,7 @@ app.post('/upload', function(req, res) {
             file_ext = files.file.name.split('.').pop(),
             index = old_path.lastIndexOf('/') + 1,
             file_name = old_path.substr(index),
-            new_path = path.join(process.env.PWD, '/uploads/', file_name + '.' + file_ext);
+            new_path = path.join(process.env.PWD, '/public/', file_name + '.' + file_ext);
 
         fs.readFile(old_path, function(err, data) {
             fs.writeFile(new_path, data, function(err) {
