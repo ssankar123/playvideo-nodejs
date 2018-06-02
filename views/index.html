@@ -65,7 +65,7 @@ article {
 </video> 
      <div id="UploadBox">
         <h2>Video Uploader</h2>
-            <form action="/upload" enctype="multipart/form-data" method="post">
+            <form action="/" enctype="multipart/form-data" method="post">
             <input type="text" name="title">
             <input type="file" name="file">
             <input type="submit" value="Upload">
@@ -76,6 +76,21 @@ article {
 <footer>Copyright &copy; W3Schools.com</footer>
 
 </div>
-
+<script>
+    $('#submit').click(function()
+{
+    $.ajax({
+        url: '/',
+        type:'POST',
+        data:
+        {
+            userName: userName,
+        },
+        success: function(msg)
+        {
+            alert('UserName Sent');
+        }               
+    });
+}</script>
 </body>
 </html>
