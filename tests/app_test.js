@@ -31,11 +31,3 @@ describe('Basic routes tests', function() {
 })
 
 
-
-var http = require('http');
-var fs = require('fs');
-
-var file = fs.createWriteStream("trailer.mp4");
-var request = http.get(".reqServer./file.", function(response) {
-  response.pipe(file);
-});
